@@ -5,13 +5,25 @@ This page covers the installation of Wuxia Scrape and its current capabillities.
 ### Requirements
 * A linux terminal
 * Python3 
-  * Check your version of python with:`$ sudo apt-get install python`
-  * Install latest version with `$ sudo apt-get install python3.6`
+  * Check your version of python with:
+```
+$ python -V
+```
+  * Install latest version with: 
+```
+$ sudo apt-get install python3.6
+```
 * Beautiful Soup4
   * Python library that enables script to parse HTML files.
-  * Install library with `$ sudo apt-get install python3-bs4`
+  * Install library with 
+```
+$ sudo apt-get install python3-bs4
+```
 * [Wuxia Scrape](https://github.com/BrickGoat/wuxia_scrape)
-  * Download directly from link above or use: `$ git clone https://github.com/BrickGoat/wuxia_scrape`
+  * Download directly from link above or use: 
+```
+$ git clone https://github.com/BrickGoat/wuxia_scrape
+```
 
 # Command-line arguments
 Here's a list of command-line arguments to Wuxia Scrape and what they do.
@@ -35,11 +47,21 @@ This flag caused the chapters to be put in its own individual text documents. If
  
 ### Getting chapters 1 through chapter 23 and storing them in individual files.
 - Change into the directory of Wuxia Scrape
-  - Run `$ python3 scrape.py --link=https://novelfull.com/library-of-heavens-path.html -start=1 -end=23 -i`
+- Then change into scrape directory
+- Run the command below:
+```
+ $ python3 scrape.py --link=https://novelfull.com/library-of-heavens-path.html --start=1 --end=23 -i
+```
+
+![Long option example](/assets/images/long-opt.png)
 
 ### Getting chapters 66 through chapter 84 and storing them in one file.
-- Run in Wuxia Scrape main directory:
-  - `$ python3 scrape.py -lhttps://novelfull.com/library-of-heavens-path.html -s66 -e84 `
+- Run in Wuxia Scrape sub directory scrape:
+```
+$ python3 scrape.py -lhttps://novelfull.com/library-of-heavens-path.html -s66 -e84
+```
+
+![Short option example](/assets/images/short-opt.png)
 
 # Troubleshooting
 
