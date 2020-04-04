@@ -46,9 +46,9 @@ This flag caused the chapters to be put in its own individual text documents. If
 # Examples
  
 ### Getting chapters 1 through chapter 23 and storing them in individual files.
-- Change into the directory of Wuxia Scrape
-- Then change into scrape directory
-- Run the command below:
+1. Change into the directory of Wuxia Scrape
+2. Then change into scrape directory
+3. Run the command below:
 ```
  $ python3 scrape.py --link=https://novelfull.com/library-of-heavens-path.html --start=1 --end=23 -i
 ```
@@ -65,17 +65,18 @@ $ python3 scrape.py -lhttps://novelfull.com/library-of-heavens-path.html -s66 -e
 
 # Troubleshooting
 
-1. No such file or directory
+- No such file or directory
     - Make sure you are in the folder /wuxia-scrape when running the script.
+    
 ```
 $ python3 scrape.py --link=https://novelfull.com/library-of-heavens-path.html -s1 -e23 -i
 python3: can't open file 'scrape.py': [Errno 2] No such file or directory
 ```
   
-2. "I downloaded all the chapters to one file and there's a chapter missing!"
+- "I downloaded all the chapters to one file and there's a chapter missing!"
     - Sometimes the title of a chapter isn't parsed when retrieving all the chapters. The chapter should still be in the file and in the correct order. 
   
-3. IndexError
+- IndexError
     - Make sure you are using Python3 and not Python2.
     - Double check that the start and or end flags are followed by valid chapter numbers.
   
@@ -88,10 +89,10 @@ Traceback (most recent call last):
 IndexError: list index out of range
 ```
 
- 4. "The novel text file is blank!"
+ - "The novel text file is blank!"
     - Make sure the ending parameter comes after the start parameter.
   
- 5. "I got chapter 49 instead of 1!"
+ - "I got chapter 49 instead of 1!"
     - Check if your start or end number is negative or if a dash was mistyped.
   
   # Support
