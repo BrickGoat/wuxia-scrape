@@ -95,7 +95,7 @@ IndexError: list index out of range
  - "I got chapter 49 instead of 1!"
     - Check if your start or end number is negative or if a dash was mistyped.
   
-  # Support
+# Support
   1. Create an [Issue](https://github.com/BrickGoat/wuxia_scrape/issues).
   2. Provide an in-depth explanation of your problem.
      - Refer to the GitHub Issue [guide](https://guides.github.com/features/issues/) if needed.
