@@ -26,6 +26,11 @@ class Novelfull:
             chapterLinks.append('http://novelfull.com' + linkTables[x])
         return chapterLinks
 
+    def get_page(self, url):
+        r = requests.get(url)
+        self.bsObj_ = BeautifulSoup(r.text)
+        return self.bsObj_
+
     def getContentPages(self):
         soup = self.soup;
         contentPages = []
