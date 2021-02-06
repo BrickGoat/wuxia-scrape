@@ -10,25 +10,21 @@ class Novelfull:
         self.novel = novel
         self.chapters = [int(start), int(end)];
 
-    def getChapterLinks(self, contentPages):
-        soup = self.soup;
-        chapterLinks = []
-        linkTables = []#two tables per page
+    def get_chapter_links(self, contentPages):
+        links = []
+        relative_links = []
         for element in contentPages:
-            nextContentPage = requests.get(element)
-            soup = BeautifulSoup(nextContentPage.text, 'lxml')
-            chapterList = soup.find_all('ul' ,class_ = 'list-chapter')
-            for link in chapterList[0].find_all('a'):
-                linkTables.append(link.get('href'))
-            for link in chapterList[1].find_all('a'):
-                linkTables.append(link.get('href'))
+            page = self.get_page(element)
+            chapters = page.find('div' , id = 'list-chapter').find('div', class_="row").find_all('a')
+            for ch in chapters:
+                relative_links.append(ch.attrs['href'])
         for x in range(self.chapters[0] - 1, self.chapters[1]):
-            chapterLinks.append('http://novelfull.com' + linkTables[x])
-        return chapterLinks
+            links.append('http://novelfull.com' + relative_links[x])
+        return links
 
     def get_page(self, url):
         r = requests.get(url)
-        self.bsObj_ = BeautifulSoup(r.text)
+        self.bsObj_ = BeautifulSoup(r.text, 'lxml')
         return self.bsObj_
 
     def getContentPages(self):

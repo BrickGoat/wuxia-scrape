@@ -35,6 +35,6 @@ for current_argument, current_value in arguments:
 nf = Novelfull(link, start, end);
 contentPages = nf.getContentPages()
 
-chapterLinks = nf.getChapterLinks(contentPages)
+chapterLinks = nf.get_chapter_links(contentPages)
 
 nf.writeChapters(chapterLinks, group)
