@@ -27,20 +27,12 @@ class Novelfull:
         self.bsObj_ = BeautifulSoup(r.text, 'lxml')
         return self.bsObj_
 
-    def getContentPages(self):
-        soup = self.soup;
+    def get_content_pages(self):
         contentPages = []
-        lastButton = soup.find('li', class_='last')
-        if(lastButton == None):
-            return
-        lastPage = lastButton.a['href']
-        page = lastPage.split("&")
-        pageFront = page[0].split("=")
-        num = int(pageFront[1])
-        start = int(math.floor(self.chapters[0] / 50));
-        end = int(math.ceil(self.chapters[1] / 50));
+        relative_link = self.soup.find('li', class_='last').a['href']
+        end = int(math.ceil(self.chapters[1] / 50))
         for x in range(1, end + 1):
-            nextPage = 'http://novelfull.com' + pageFront[0] + '=' + str(x) + "&per-page=50"
+            nextPage = 'http://novelfull.com' + relative_link.split("=")[0] + '=' + str(x) + "&per-page=50"
             contentPages.append(nextPage)
         return contentPages
 
