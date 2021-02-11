@@ -37,4 +37,4 @@ contentPages = nf.get_content_pages()
 
 chapterLinks = nf.get_chapter_links(contentPages)
 
-nf.writeChapters(chapterLinks, group)
+nf.write_chapters(chapterLinks, group)
