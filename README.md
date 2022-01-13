@@ -19,10 +19,10 @@ $ sudo apt-get install python3.6
 ```
 $ sudo apt-get install python3-bs4
 ```
-* [Wuxia Scrape](https://github.com/BrickGoat/wuxia_scrape)
+* [Wuxia Scrape](https://github.com/BrickGoat/wuxia-scrape)
   * Download directly from link above or use: 
 ```
-$ git clone https://github.com/BrickGoat/wuxia_scrape
+$ git clone https://github.com/BrickGoat/wuxia-scrape
 ```
 
 # Command-line arguments
@@ -96,6 +96,6 @@ IndexError: list index out of range
     - Check if your start or end number is negative or if a dash was mistyped.
   
 # Support
-  1. Create an [Issue](https://github.com/BrickGoat/wuxia_scrape/issues).
+  1. Create an [Issue](https://github.com/BrickGoat/wuxia-scrape/issues).
   2. Provide an in-depth explanation of your problem.
      - Refer to the GitHub Issue [guide](https://guides.github.com/features/issues/) if needed.
