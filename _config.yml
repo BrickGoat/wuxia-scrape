@@ -3,4 +3,4 @@ title: Wuxia Scrape
 description: Wuxia Scrape is a python application that writes webnovels from NovelFull into text documents on your computer.
 logo: /assets/images/logo.png
 show_downloads: true
-baseurl: /wuxia_scrape
+baseurl: /wuxia-scrape
